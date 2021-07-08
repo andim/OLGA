@@ -391,7 +391,7 @@ def gene_to_num_str(gene_name, gene_type, allele=True):
                         if not g == 'x']) # do not keep unassigned secondary classification
     if allele:
         num_str = '*'.join([g.lstrip('0') for g in num_str.split('*')])
-    return gene_type.lower()
+    return gene_type.lower() + num_str
 
 #%% Entropy Functions
 def calc_S(P, base):
